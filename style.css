@@ -1,0 +1,59 @@
+h3.encounter-title.noborder {
+  line-height: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+button {
+  line-height: 14px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+#setup-configuration {
+  min-height: 680px;
+  height: auto !important;
+}
+
+#setup-configuration nav.tabs a {
+  flex-basis: auto;
+}
+
+#setup-configuration #force-update {
+  flex-grow: 1 !important;
+}
+
+.package-list .package .package-controls button.update {
+    width: auto;
+}
+
+form .form-group label {
+  line-height: 16px;
+  padding: 5px 0;
+}
+
+#manage-players footer button {
+  white-space: nowrap;
+}
+
+#combat #combat-round .encounters h3 {
+  line-height: 18px;
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+nav.tabs.sheet-tabs.secondary-tabs {
+  white-space: nowrap;
+}
+
+.directory .action-buttons button {
+  line-height: 14px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.package-list .package .package-controls button {
+  line-height: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
