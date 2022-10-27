@@ -12,15 +12,15 @@
   }],
   "coreTranslation": true,
 
-  "scripts": ["script.js"],
-  "styles": ["style.css"],
+  "scripts": ["scripts/script.js"],
+  "styles": ["css/style.css"],
   "packs": [],
 
   "languages": [
     {
       "lang": "cs",
       "name": "Česky (Czech)",
-      "path": "cs.json"
+      "path": "lang/cs.json"
     }
   ]
 }
