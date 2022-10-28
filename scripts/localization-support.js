@@ -9,7 +9,7 @@ console.log('FoundryCZ: Inicializace Foundry VTT cs-CZ modulu')
  * @param {object} data
  * @returns {string}
  */
- Localization.prototype.format = function (stringId, data = {}) {
+Localization.prototype.format = function (stringId, data = {}) {
   let str = this.localize(stringId)
 
   const fmt = /{[^}]+}/g

@@ -52,7 +52,15 @@ nav.tabs.sheet-tabs.secondary-tabs {
   padding-bottom: 6px;
 }
 
+#install-package .package-list .package-tags .tag, #install-package .package-list .package-controls .tag,
+#install-package .package-list .package-tags button, #install-package .package-list .package-controls button {
+  width: 120px;
+}
+
+#install-package .package-list .package-tags button,
+#install-package .package-list .package-controls button,
 .package-list .package .package-controls button {
+  width: 120px;
   line-height: 14px;
   padding-top: 5px;
   padding-bottom: 5px;

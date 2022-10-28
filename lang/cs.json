@@ -774,7 +774,7 @@
   "SETUP.PackageFilterHint": "Dostupné balíčky můžete filtrovat podle názvu.",
   "SETUP.PackageCategories": "Kategorie balíčků",
   "SETUP.PackageInstalled": "Nainstalován",
-  "SETUP.PackageNotOwned": "Není vlastněn",
+  "SETUP.PackageNotOwned": "Nevlastníte",
   "SETUP.PackageName": "Název balíčku",
   "SETUP.PackageVisAll": "Všechny balíčky",
   "SETUP.PackageVisInst": "Pouze instalované",

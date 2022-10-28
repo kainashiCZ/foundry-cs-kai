@@ -1,8 +1,8 @@
 {
   "name": "foundry-cs-kai",
-  "title": "FoundryVTT - cs-CZ - Kai's invasive edition",
+  "title": "FoundryVTT - cs-CZ - Kai's edition",
   "description": "Add Czech language to FoundryVTT with support for declensions, gendered nouns and capital letter modifications.",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "compatibility": {
     "minimum": 10,
     "verified": "10.288"
@@ -13,7 +13,7 @@
 
   "coreTranslation": true,
 
-  "scripts": ["scripts/localize.js", "scripts/template-alterations.js", "scripts/data-modifications.js"],
+  "scripts": ["scripts/localization-support.js", "scripts/rendering-modification.js", "scripts/templates-modifications.js"],
   "styles": ["css/style.css"],
 
   "languages": [
@@ -24,7 +24,7 @@
     }
   ],
 
-  "download": "https://github.com/kainashiCZ/foundry-cs-kai/archive/refs/tags/v0.5.0.zip",
+  "download": "https://github.com/kainashiCZ/foundry-cs-kai/archive/refs/tags/v0.6.0.zip",
   "manifest": "https://raw.githubusercontent.com/kainashiCZ/foundry-cs-kai/main/module.json",
   "url": "https://github.com/kainashiCZ/foundry-cs-kai/"
 }
