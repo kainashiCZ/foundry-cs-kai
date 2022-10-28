@@ -14,8 +14,8 @@ const FoundryCZ = new FoundryCZResolver()
 
 const originalRenderTemplate = window.renderTemplate
 window.renderTemplate = async function (path, data) {
-  console.log('Probiha render:', path)
   if (path in FoundryCZ.templateDataAlterations) {
+    console.log('FoundryCZ altering |', path)
     FoundryCZ.templateDataAlterations[path](data)
   }
   return originalRenderTemplate(path, data)

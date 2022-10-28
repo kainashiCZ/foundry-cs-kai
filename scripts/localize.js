@@ -1,4 +1,4 @@
-console.log('Inicializace Foundry VTT cs-CZ modulu')
+console.log('FoundryCZ: Inicializace Foundry VTT cs-CZ modulu')
 
 /**
  * Nahradí lokalizační metodu
@@ -11,9 +11,9 @@ console.log('Inicializace Foundry VTT cs-CZ modulu')
  */
  Localization.prototype.format = function (stringId, data = {}) {
   let str = this.localize(stringId)
-  let gender = 'male'
 
   const fmt = /{[^}]+}/g
+  var gender = 'male'
   str = str.replace(fmt, k => {
     const keyAndMods = k.slice(1, -1).split('|')
     const key = keyAndMods[0]
@@ -56,20 +56,10 @@ console.log('Inicializace Foundry VTT cs-CZ modulu')
   })
 
   return str.replace(/\[\[[^\]]+\]\]/g, s => {
-    const genderes = s.slice(2, -3).split('|')
-    return (gender === 'male' ? genderes[0] : gender === 'female' ? genderes[1] : genderes[2]) ?? genderes[0]
+    const genders = s.slice(2, -2).split('|')
+    return (gender === 'male' ? genders[0] : gender === 'female' ? genders[1] : genders[2]) ?? genders[0]
   })
 }
-
-function localize (value, options) {
-  const data = options.hash
-  const result = foundry.utils.isEmpty(data) ? game.i18n.localize(value) : game.i18n.format(value, data)
-  return result.firstDeclension()
-}
-
-Handlebars.registerHelper({
-  localize
-})
 
 /**
  * Pořadová čísla
@@ -81,6 +71,18 @@ Number.prototype.ordinalString = function () {
 
 String.prototype.firstDeclension = function () {
   return this.replace(/^\w::/, '').split('|')[0]
+}
+
+/**
+ * Nahrazení původního escapovaní Handlebars
+ */
+const originalEscapeExpression = Handlebars.Utils.escapeExpression
+Handlebars.Utils.escapeExpression = function (string) {
+  if (typeof string === 'string') {
+    string = string.firstDeclension()
+  }
+
+  return originalEscapeExpression(string)
 }
 
 /**
