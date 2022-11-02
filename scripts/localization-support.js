@@ -90,14 +90,12 @@ Handlebars.Utils.escapeExpression = function (string) {
  */
 Hooks.once('ready', () => {
   const tooltipObserver = new MutationObserver(() => {
-    if (game.tooltip.element?.parentElement.classList.contains('tabs')) {
-      if (game.tooltip.tooltip.innerHTML.includes('|') || game.tooltip.tooltip.innerHTML.includes('::')) {
-        game.tooltip.tooltip.innerHTML = game.tooltip.tooltip.innerHTML.firstDeclension()
-        game.tooltip._setAnchor('DOWN')
-      }
+    if (game.tooltip.tooltip.innerHTML.includes('|') || game.tooltip.tooltip.innerHTML.includes('::')) {
+      game.tooltip.tooltip.innerHTML = game.tooltip.tooltip.innerHTML.firstDeclension()
+      game.tooltip._setAnchor(game.tooltip._determineDirection())
     }
   })
-  tooltipObserver.observe(game.tooltip.tooltip, {
+  tooltipObserver.observe(document.querySelector('#tooltip'), {
     childList: true
   })
 })
