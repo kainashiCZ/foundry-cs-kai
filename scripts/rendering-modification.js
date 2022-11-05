@@ -22,6 +22,11 @@ const FoundryCZ = new FoundryCZResolver()
  */
 const originalRenderTemplate = this.renderTemplate
 this.renderTemplate = async function (path, data) {
+  if ('*' in FoundryCZ.templateDataAlterations) {
+    console.log('FoundryCZ altering (all templates) |', path)
+    FoundryCZ.templateDataAlterations['*'](data)
+  }
+
   if (path in FoundryCZ.templateDataAlterations) {
     console.log('FoundryCZ altering |', path)
     FoundryCZ.templateDataAlterations[path](data)
